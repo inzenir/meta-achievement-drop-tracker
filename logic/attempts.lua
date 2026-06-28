@@ -23,6 +23,14 @@ function Attempts.IncrementBySourceKey(sourceKey, delta)
 end
 
 function Attempts.IncrementByEncounter(encounterId, variant, delta)
-    local sourceKey = DropTracker.SourceKey.Make(DropTracker.SourceKind.encounter, encounterId, variant)
-    Attempts.IncrementBySourceKey(sourceKey, delta)
+    local kind = DropTracker.SourceKind.encounter
+    local variantKey = DropTracker.SourceKey.Make(kind, encounterId, variant)
+    local baseKey = DropTracker.SourceKey.Make(kind, encounterId, nil)
+
+    if #DropTracker.Catalog.GetLinksBySourceKey(variantKey) > 0 then
+        Attempts.IncrementBySourceKey(variantKey, delta)
+    end
+    if #DropTracker.Catalog.GetLinksBySourceKey(baseKey) > 0 then
+        Attempts.IncrementBySourceKey(baseKey, delta)
+    end
 end

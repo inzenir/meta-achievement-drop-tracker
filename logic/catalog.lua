@@ -33,14 +33,19 @@ end
 
 local function normalizeItem(expansion, collectionType, entry)
     local collectionId = resolveCollectionId(collectionType, entry)
-    return {
+    local item = {
         expansion = expansion,
         collectionType = collectionType,
         collectionId = collectionId,
         name = entry.name,
         dropItemId = entry.dropItemId,
+        listGroup = entry.listGroup,
         sources = entry.sources or {},
     }
+    if not item.listGroup and DropTracker.ListGroups and DropTracker.ListGroups.Resolve then
+        item.listGroup = DropTracker.ListGroups.Resolve(item)
+    end
+    return item
 end
 
 function Catalog.BuildIndexes()

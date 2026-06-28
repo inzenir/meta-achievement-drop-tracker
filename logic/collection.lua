@@ -35,3 +35,29 @@ function Collection.IsCollected(collectionType, collectionId)
     end
     return false
 end
+
+function Collection.GetIcon(collectionType, collectionId, dropItemId)
+    collectionId = tonumber(collectionId)
+    dropItemId = tonumber(dropItemId)
+
+    if collectionType == DropTracker.CollectionType.mount and collectionId and C_MountJournal and C_MountJournal.GetMountInfoByID then
+        local _, _, icon = C_MountJournal.GetMountInfoByID(collectionId)
+        if icon then
+            return icon
+        end
+    end
+
+    if dropItemId then
+        if C_Item and C_Item.GetItemIconByID then
+            local icon = C_Item.GetItemIconByID(dropItemId)
+            if icon then
+                return icon
+            end
+        end
+        if GetItemIcon then
+            return GetItemIcon(dropItemId)
+        end
+    end
+
+    return 134400 -- question mark icon
+end

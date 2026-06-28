@@ -8,6 +8,9 @@ local function defaultSettings()
         lastExpansion = nil,
         lastCollectionType = nil,
         lastCollectionId = nil,
+        sourceDetailExpanded = false,
+        hideCollectedMounts = false,
+        hideFarmed = false,
     }
 end
 

@@ -16,7 +16,7 @@ local function registerPlugin()
             DropTracker.UI.Controller.OnTabShow(mainFrame, contentHost)
         end,
         onHide = function(mainFrame, contentHost)
-            DropTracker.UI.Controller.OnTabHide(mainFrame, contentHost)
+            DropTracker.UI.Controller.OnTabHide()
         end,
     })
 end

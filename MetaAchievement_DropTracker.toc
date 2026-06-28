@@ -2,7 +2,7 @@
 ## Title: Meta Achievement Tracker - Drop Tracker
 ## Notes: Track mount and toy drop attempts across your account.
 ## Author: inzenir
-## Version: 0.1.0
+## Version: @project-version@
 
 ## Category: Meta Achievement Tracker
 ## Dependencies: Worldsoul_Searching
@@ -14,11 +14,16 @@ constants.lua
 logic\source-key.lua
 logic\probability.lua
 logic\collection.lua
+logic\eligibility.lua
+logic\list-group.lua
 logic\storage.lua
 logic\catalog.lua
 
 drop-list\Midnight\mounts.lua
+drop-list\Midnight\toys.lua
+drop-list\TheWarWithin\mounts.lua
 
+logic\statistics.lua
 logic\stat-merge.lua
 logic\attempts.lua
 logic\obtained.lua
@@ -28,8 +33,10 @@ events\world-loot.lua
 events\collection.lua
 events\init.lua
 
+ui\util.lua
+ui\filters.lua
+ui\breadcrumbs.lua
 ui\options-provider.lua
-ui\expansion-list.lua
 ui\item-list.lua
 ui\detail-panel.lua
 ui\controller.lua

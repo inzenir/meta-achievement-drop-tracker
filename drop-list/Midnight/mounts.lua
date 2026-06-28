@@ -1,6 +1,6 @@
 --[[
   Midnight zone rare mount drops.
-  Sourced from Wowhead dropped-by NPC list (fetch_wowhead_item_drops.py).
+  Sourced from Wowhead (fetch_wowhead_item_drops.py) + HandyNotes (enrich_drop_list.py).
 ]]
 
 DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
@@ -15,6 +15,7 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 5 / 4617,
                 label = "Ahl'ua'huhi",
+                lootLock = { type = "quest", id = 92193 },
                 locations = { { mapId = DropTracker.Maps.midnight.harandar, x = 39.66, y = 60.76 } },
             },
             {
@@ -23,6 +24,7 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 4 / 2074,
                 label = "Annulus the Worldshaker",
+                lootLock = { type = "quest", id = 92194 },
                 locations = { { mapId = DropTracker.Maps.midnight.harandar, x = 44.42, y = 15.99 } },
             },
             {
@@ -31,6 +33,7 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 6 / 4550,
                 label = "Chironex",
+                lootLock = { type = "quest", id = 92137 },
                 locations = { { mapId = DropTracker.Maps.midnight.harandar, x = 68.66, y = 39.04 } },
             },
             {
@@ -39,6 +42,7 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 3 / 3889,
                 label = "Chlorokyll",
+                lootLock = { type = "quest", id = 92161 },
                 locations = { { mapId = DropTracker.Maps.midnight.harandar, x = 64.43, y = 47.52 } },
             },
             {
@@ -47,6 +51,7 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 4 / 4494,
                 label = "Dracaena",
+                lootLock = { type = "quest", id = 92176 },
                 locations = { { mapId = DropTracker.Maps.midnight.harandar, x = 40.65, y = 43.13 } },
             },
             {
@@ -55,6 +60,7 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 8 / 5271,
                 label = "Ha'kalawe",
+                lootLock = { type = "quest", id = 92142 },
                 locations = { { mapId = DropTracker.Maps.midnight.harandar, x = 69.03, y = 59.95 } },
             },
             {
@@ -63,6 +69,7 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 6 / 4376,
                 label = "Mindrot",
+                lootLock = { type = "quest", id = 92172 },
                 locations = { { mapId = DropTracker.Maps.midnight.harandar, x = 45.61, y = 29.69 } },
             },
             {
@@ -71,6 +78,7 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 12 / 4405,
                 label = "Oro'ohna",
+                lootLock = { type = "quest", id = 92190 },
                 locations = { { mapId = DropTracker.Maps.midnight.harandar, x = 28.1, y = 81.83 } },
             },
             {
@@ -79,6 +87,7 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 3 / 3198,
                 label = "Pterrock",
+                lootLock = { type = "quest", id = 92191 },
                 locations = { { mapId = DropTracker.Maps.midnight.harandar, x = 27.38, y = 71.39 } },
             },
             {
@@ -87,6 +96,7 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 11 / 5379,
                 label = "Queen Lashtongue",
+                lootLock = { type = "quest", id = 92154 },
                 locations = { { mapId = DropTracker.Maps.midnight.harandar, x = 59.86, y = 47.02 } },
             },
             {
@@ -95,6 +105,7 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 2 / 4996,
                 label = "Rhazul",
+                lootLock = { type = "quest", id = 91832 },
                 locations = { { mapId = DropTracker.Maps.midnight.harandar, x = 51.17, y = 45.34 } },
             },
             {
@@ -103,6 +114,7 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 9 / 4319,
                 label = "Serrasa",
+                lootLock = { type = "quest", id = 92170 },
                 locations = { { mapId = DropTracker.Maps.midnight.harandar, x = 56.82, y = 34.09 } },
             },
             {
@@ -111,6 +123,7 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 9 / 4779,
                 label = "Stumpy",
+                lootLock = { type = "quest", id = 92168 },
                 locations = { { mapId = DropTracker.Maps.midnight.harandar, x = 65.77, y = 32.86 } },
             },
             {
@@ -119,6 +132,7 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 7 / 3357,
                 label = "Tallcap the Truthspreader",
+                lootLock = { type = "quest", id = 92148 },
                 locations = { { mapId = DropTracker.Maps.midnight.harandar, x = 72.64, y = 69.34 } },
             },
             {
@@ -127,6 +141,7 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 8 / 4026,
                 label = "Treetop",
+                lootLock = { type = "quest", id = 92183 },
                 locations = { { mapId = DropTracker.Maps.midnight.harandar, x = 36.56, y = 74.83 } },
             },
         },
@@ -142,6 +157,7 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 6 / 4617,
                 label = "Ahl'ua'huhi",
+                lootLock = { type = "quest", id = 92193 },
                 locations = { { mapId = DropTracker.Maps.midnight.harandar, x = 39.66, y = 60.76 } },
             },
             {
@@ -150,6 +166,7 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 5 / 2074,
                 label = "Annulus the Worldshaker",
+                lootLock = { type = "quest", id = 92194 },
                 locations = { { mapId = DropTracker.Maps.midnight.harandar, x = 44.42, y = 15.99 } },
             },
             {
@@ -158,6 +175,7 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 5 / 4550,
                 label = "Chironex",
+                lootLock = { type = "quest", id = 92137 },
                 locations = { { mapId = DropTracker.Maps.midnight.harandar, x = 68.66, y = 39.04 } },
             },
             {
@@ -166,6 +184,7 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 14 / 3889,
                 label = "Chlorokyll",
+                lootLock = { type = "quest", id = 92161 },
                 locations = { { mapId = DropTracker.Maps.midnight.harandar, x = 64.43, y = 47.52 } },
             },
             {
@@ -174,6 +193,7 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 7 / 4494,
                 label = "Dracaena",
+                lootLock = { type = "quest", id = 92176 },
                 locations = { { mapId = DropTracker.Maps.midnight.harandar, x = 40.65, y = 43.13 } },
             },
             {
@@ -182,6 +202,7 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 8 / 5271,
                 label = "Ha'kalawe",
+                lootLock = { type = "quest", id = 92142 },
                 locations = { { mapId = DropTracker.Maps.midnight.harandar, x = 69.03, y = 59.95 } },
             },
             {
@@ -190,6 +211,7 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 7 / 4376,
                 label = "Mindrot",
+                lootLock = { type = "quest", id = 92172 },
                 locations = { { mapId = DropTracker.Maps.midnight.harandar, x = 45.61, y = 29.69 } },
             },
             {
@@ -198,6 +220,7 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 12 / 4405,
                 label = "Oro'ohna",
+                lootLock = { type = "quest", id = 92190 },
                 locations = { { mapId = DropTracker.Maps.midnight.harandar, x = 28.1, y = 81.83 } },
             },
             {
@@ -206,6 +229,7 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 4 / 3198,
                 label = "Pterrock",
+                lootLock = { type = "quest", id = 92191 },
                 locations = { { mapId = DropTracker.Maps.midnight.harandar, x = 27.38, y = 71.39 } },
             },
             {
@@ -214,6 +238,7 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 8 / 5379,
                 label = "Queen Lashtongue",
+                lootLock = { type = "quest", id = 92154 },
                 locations = { { mapId = DropTracker.Maps.midnight.harandar, x = 59.86, y = 47.02 } },
             },
             {
@@ -222,6 +247,7 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 6 / 4996,
                 label = "Rhazul",
+                lootLock = { type = "quest", id = 91832 },
                 locations = { { mapId = DropTracker.Maps.midnight.harandar, x = 51.17, y = 45.34 } },
             },
             {
@@ -230,6 +256,7 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 2 / 4319,
                 label = "Serrasa",
+                lootLock = { type = "quest", id = 92170 },
                 locations = { { mapId = DropTracker.Maps.midnight.harandar, x = 56.82, y = 34.09 } },
             },
             {
@@ -238,6 +265,7 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 7 / 4779,
                 label = "Stumpy",
+                lootLock = { type = "quest", id = 92168 },
                 locations = { { mapId = DropTracker.Maps.midnight.harandar, x = 65.77, y = 32.86 } },
             },
             {
@@ -246,6 +274,7 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 7 / 3357,
                 label = "Tallcap the Truthspreader",
+                lootLock = { type = "quest", id = 92148 },
                 locations = { { mapId = DropTracker.Maps.midnight.harandar, x = 72.64, y = 69.34 } },
             },
             {
@@ -254,6 +283,7 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 9 / 4026,
                 label = "Treetop",
+                lootLock = { type = "quest", id = 92183 },
                 locations = { { mapId = DropTracker.Maps.midnight.harandar, x = 36.56, y = 74.83 } },
             },
         },
@@ -269,6 +299,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 6 / 4480,
                 label = "Bad Zed",
+                lootLock = { type = "quest", id = 92404 },
+                locations = { { mapId = DropTracker.Maps.midnight.eversong_woods } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -276,6 +308,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 17 / 6479,
                 label = "Banuran",
+                lootLock = { type = "quest", id = 92403 },
+                locations = { { mapId = DropTracker.Maps.midnight.eversong_woods } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -283,6 +317,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 14 / 8322,
                 label = "Bloated Snapdragon",
+                lootLock = { type = "quest", id = 92366 },
+                locations = { { mapId = DropTracker.Maps.midnight.eversong_woods } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -290,6 +326,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 15 / 5724,
                 label = "Coralfang",
+                lootLock = { type = "quest", id = 92389 },
+                locations = { { mapId = DropTracker.Maps.midnight.eversong_woods } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -297,6 +335,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 11 / 6047,
                 label = "Cre'van",
+                lootLock = { type = "quest", id = 92391 },
+                locations = { { mapId = DropTracker.Maps.midnight.eversong_woods } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -304,6 +344,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 12 / 8998,
                 label = "Dame Bloodshed",
+                lootLock = { type = "quest", id = 93561 },
+                locations = { { mapId = DropTracker.Maps.midnight.eversong_woods } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -311,6 +353,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 8 / 7622,
                 label = "Duskburn",
+                lootLock = { type = "quest", id = 93550 },
+                locations = { { mapId = DropTracker.Maps.midnight.eversong_woods } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -318,6 +362,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 13 / 7902,
                 label = "Harried Hawkstrider",
+                lootLock = { type = "quest", id = 91315 },
+                locations = { { mapId = DropTracker.Maps.midnight.eversong_woods } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -325,6 +371,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 12 / 6852,
                 label = "Lady Liminus",
+                lootLock = { type = "quest", id = 92393 },
+                locations = { { mapId = DropTracker.Maps.midnight.eversong_woods } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -332,6 +380,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 13 / 6803,
                 label = "Lost Guardian",
+                lootLock = { type = "quest", id = 92399 },
+                locations = { { mapId = DropTracker.Maps.midnight.eversong_woods } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -339,6 +389,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 13 / 8098,
                 label = "Malfunctioning Construct",
+                lootLock = { type = "quest", id = 93555 },
+                locations = { { mapId = DropTracker.Maps.midnight.eversong_woods } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -346,6 +398,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 11 / 5065,
                 label = "Overfester Hydra",
+                lootLock = { type = "quest", id = 92392 },
+                locations = { { mapId = DropTracker.Maps.midnight.eversong_woods } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -353,6 +407,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 5 / 4876,
                 label = "Terrinor",
+                lootLock = { type = "quest", id = 92409 },
+                locations = { { mapId = DropTracker.Maps.midnight.eversong_woods } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -360,6 +416,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 10 / 7782,
                 label = "Warden of Weeds",
+                lootLock = { type = "quest", id = 91280 },
+                locations = { { mapId = DropTracker.Maps.midnight.eversong_woods } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -367,6 +425,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 11 / 5871,
                 label = "Waverly",
+                lootLock = { type = "quest", id = 92395 },
+                locations = { { mapId = DropTracker.Maps.midnight.eversong_woods } },
             },
         },
     },
@@ -381,6 +441,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 6 / 4480,
                 label = "Bad Zed",
+                lootLock = { type = "quest", id = 92404 },
+                locations = { { mapId = DropTracker.Maps.midnight.eversong_woods } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -388,6 +450,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 10 / 6479,
                 label = "Banuran",
+                lootLock = { type = "quest", id = 92403 },
+                locations = { { mapId = DropTracker.Maps.midnight.eversong_woods } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -395,6 +459,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 13 / 8322,
                 label = "Bloated Snapdragon",
+                lootLock = { type = "quest", id = 92366 },
+                locations = { { mapId = DropTracker.Maps.midnight.eversong_woods } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -402,6 +468,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 7 / 5724,
                 label = "Coralfang",
+                lootLock = { type = "quest", id = 92389 },
+                locations = { { mapId = DropTracker.Maps.midnight.eversong_woods } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -409,6 +477,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 5 / 6047,
                 label = "Cre'van",
+                lootLock = { type = "quest", id = 92391 },
+                locations = { { mapId = DropTracker.Maps.midnight.eversong_woods } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -416,6 +486,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 14 / 8998,
                 label = "Dame Bloodshed",
+                lootLock = { type = "quest", id = 93561 },
+                locations = { { mapId = DropTracker.Maps.midnight.eversong_woods } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -423,6 +495,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 11 / 7622,
                 label = "Duskburn",
+                lootLock = { type = "quest", id = 93550 },
+                locations = { { mapId = DropTracker.Maps.midnight.eversong_woods } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -430,6 +504,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 16 / 7902,
                 label = "Harried Hawkstrider",
+                lootLock = { type = "quest", id = 91315 },
+                locations = { { mapId = DropTracker.Maps.midnight.eversong_woods } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -437,6 +513,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 13 / 6852,
                 label = "Lady Liminus",
+                lootLock = { type = "quest", id = 92393 },
+                locations = { { mapId = DropTracker.Maps.midnight.eversong_woods } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -444,6 +522,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 8 / 6803,
                 label = "Lost Guardian",
+                lootLock = { type = "quest", id = 92399 },
+                locations = { { mapId = DropTracker.Maps.midnight.eversong_woods } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -451,6 +531,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 14 / 8098,
                 label = "Malfunctioning Construct",
+                lootLock = { type = "quest", id = 93555 },
+                locations = { { mapId = DropTracker.Maps.midnight.eversong_woods } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -458,6 +540,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 3 / 5065,
                 label = "Overfester Hydra",
+                lootLock = { type = "quest", id = 92392 },
+                locations = { { mapId = DropTracker.Maps.midnight.eversong_woods } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -465,6 +549,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 8 / 4876,
                 label = "Terrinor",
+                lootLock = { type = "quest", id = 92409 },
+                locations = { { mapId = DropTracker.Maps.midnight.eversong_woods } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -472,6 +558,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 10 / 7782,
                 label = "Warden of Weeds",
+                lootLock = { type = "quest", id = 91280 },
+                locations = { { mapId = DropTracker.Maps.midnight.eversong_woods } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -479,6 +567,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 5 / 5871,
                 label = "Waverly",
+                lootLock = { type = "quest", id = 92395 },
+                locations = { { mapId = DropTracker.Maps.midnight.eversong_woods } },
             },
         },
     },
@@ -493,6 +583,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 9 / 5114,
                 label = "Ash'an the Empowered",
+                lootLock = { type = "quest", id = 91073 },
+                locations = { { mapId = DropTracker.Maps.midnight.zulaman } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -500,6 +592,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 7 / 5664,
                 label = "Depthborn Eelamental",
+                lootLock = { type = "quest", id = 89573 },
+                locations = { { mapId = DropTracker.Maps.midnight.zulaman } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -507,6 +601,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 3 / 3487,
                 label = "Elder Oaktalon",
+                lootLock = { type = "quest", id = 89572 },
+                locations = { { mapId = DropTracker.Maps.midnight.zulaman } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -514,6 +610,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 9 / 6057,
                 label = "Lightwood Borer",
+                lootLock = { type = "quest", id = 89575 },
+                locations = { { mapId = DropTracker.Maps.midnight.zulaman } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -521,6 +619,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 6 / 5214,
                 label = "Mrrlokk",
+                lootLock = { type = "quest", id = 91174 },
+                locations = { { mapId = DropTracker.Maps.midnight.zulaman } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -528,6 +628,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 4 / 6055,
                 label = "Necrohexxer Raz'ka",
+                lootLock = { type = "quest", id = 89569 },
+                locations = { { mapId = DropTracker.Maps.midnight.zulaman } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -535,6 +637,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 7 / 6902,
                 label = "Oophaga",
+                lootLock = { type = "quest", id = 89579 },
+                locations = { { mapId = DropTracker.Maps.midnight.zulaman } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -542,6 +646,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 7 / 6214,
                 label = "Poacher Rav'ik",
+                lootLock = { type = "quest", id = 91634 },
+                locations = { { mapId = DropTracker.Maps.midnight.zulaman } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -549,6 +655,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 8 / 4938,
                 label = "Skullcrusher Harak",
+                lootLock = { type = "quest", id = 89571 },
+                locations = { { mapId = DropTracker.Maps.midnight.zulaman } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -556,6 +664,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 6 / 5668,
                 label = "Spinefrill",
+                lootLock = { type = "quest", id = 89578 },
+                locations = { { mapId = DropTracker.Maps.midnight.zulaman } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -563,6 +673,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 7 / 3856,
                 label = "The Decaying Diamondback",
+                lootLock = { type = "quest", id = 91072 },
+                locations = { { mapId = DropTracker.Maps.midnight.zulaman } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -570,6 +682,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 5 / 5828,
                 label = "The Devouring Invader",
+                lootLock = { type = "quest", id = 89583 },
+                locations = { { mapId = DropTracker.Maps.midnight.zulaman } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -577,6 +691,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 13 / 5392,
                 label = "The Snapping Scourge",
+                lootLock = { type = "quest", id = 89570 },
+                locations = { { mapId = DropTracker.Maps.midnight.zulaman } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -584,6 +700,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 10 / 6289,
                 label = "Tiny Vermin",
+                lootLock = { type = "quest", id = 89580 },
+                locations = { { mapId = DropTracker.Maps.midnight.zulaman } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -591,6 +709,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 5 / 3981,
                 label = "Voidtouched Crustacean",
+                lootLock = { type = "quest", id = 89581 },
+                locations = { { mapId = DropTracker.Maps.midnight.zulaman } },
             },
         },
     },
@@ -605,6 +725,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 6 / 5114,
                 label = "Ash'an the Empowered",
+                lootLock = { type = "quest", id = 91073 },
+                locations = { { mapId = DropTracker.Maps.midnight.zulaman } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -612,6 +734,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 11 / 5664,
                 label = "Depthborn Eelamental",
+                lootLock = { type = "quest", id = 89573 },
+                locations = { { mapId = DropTracker.Maps.midnight.zulaman } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -619,6 +743,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 10 / 3487,
                 label = "Elder Oaktalon",
+                lootLock = { type = "quest", id = 89572 },
+                locations = { { mapId = DropTracker.Maps.midnight.zulaman } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -626,6 +752,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 7 / 6057,
                 label = "Lightwood Borer",
+                lootLock = { type = "quest", id = 89575 },
+                locations = { { mapId = DropTracker.Maps.midnight.zulaman } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -633,6 +761,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 5 / 5214,
                 label = "Mrrlokk",
+                lootLock = { type = "quest", id = 91174 },
+                locations = { { mapId = DropTracker.Maps.midnight.zulaman } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -640,6 +770,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 5 / 6055,
                 label = "Necrohexxer Raz'ka",
+                lootLock = { type = "quest", id = 89569 },
+                locations = { { mapId = DropTracker.Maps.midnight.zulaman } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -647,6 +779,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 6 / 6902,
                 label = "Oophaga",
+                lootLock = { type = "quest", id = 89579 },
+                locations = { { mapId = DropTracker.Maps.midnight.zulaman } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -654,6 +788,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 10 / 6214,
                 label = "Poacher Rav'ik",
+                lootLock = { type = "quest", id = 91634 },
+                locations = { { mapId = DropTracker.Maps.midnight.zulaman } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -661,6 +797,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 7 / 4938,
                 label = "Skullcrusher Harak",
+                lootLock = { type = "quest", id = 89571 },
+                locations = { { mapId = DropTracker.Maps.midnight.zulaman } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -668,6 +806,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 7 / 5668,
                 label = "Spinefrill",
+                lootLock = { type = "quest", id = 89578 },
+                locations = { { mapId = DropTracker.Maps.midnight.zulaman } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -675,6 +815,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 1 / 3856,
                 label = "The Decaying Diamondback",
+                lootLock = { type = "quest", id = 91072 },
+                locations = { { mapId = DropTracker.Maps.midnight.zulaman } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -682,6 +824,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 5 / 5828,
                 label = "The Devouring Invader",
+                lootLock = { type = "quest", id = 89583 },
+                locations = { { mapId = DropTracker.Maps.midnight.zulaman } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -689,6 +833,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 6 / 5392,
                 label = "The Snapping Scourge",
+                lootLock = { type = "quest", id = 89570 },
+                locations = { { mapId = DropTracker.Maps.midnight.zulaman } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -696,6 +842,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 8 / 6289,
                 label = "Tiny Vermin",
+                lootLock = { type = "quest", id = 89580 },
+                locations = { { mapId = DropTracker.Maps.midnight.zulaman } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -703,6 +851,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 6 / 3981,
                 label = "Voidtouched Crustacean",
+                lootLock = { type = "quest", id = 89581 },
+                locations = { { mapId = DropTracker.Maps.midnight.zulaman } },
             },
         },
     },
@@ -717,6 +867,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 3 / 2502,
                 label = "Abysslick",
+                lootLock = { type = "quest", id = 94462 },
+                locations = { { mapId = DropTracker.Maps.midnight.voidstorm } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -724,6 +876,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 4 / 4078,
                 label = "Aeonelle Blackstar",
+                lootLock = { type = "quest", id = 93944 },
+                locations = { { mapId = DropTracker.Maps.midnight.voidstorm } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -731,6 +885,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 10 / 3479,
                 label = "Bane of the Vilebloods",
+                lootLock = { type = "quest", id = 93946 },
+                locations = { { mapId = DropTracker.Maps.midnight.voidstorm } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -738,6 +894,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 8 / 4687,
                 label = "Bilemaw the Gluttonous",
+                lootLock = { type = "quest", id = 93884 },
+                locations = { { mapId = DropTracker.Maps.midnight.voidstorm } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -745,6 +903,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 5 / 3067,
                 label = "Blackcore",
+                lootLock = { type = "quest", id = 94463 },
+                locations = { { mapId = DropTracker.Maps.midnight.voidstorm } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -752,6 +912,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 4 / 1867,
                 label = "Eruundi",
+                lootLock = { type = "quest", id = 91047 },
+                locations = { { mapId = DropTracker.Maps.midnight.slayers_rise } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -759,6 +921,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 9 / 5210,
                 label = "Far'thana the Mad",
+                lootLock = { type = "quest", id = 93896 },
+                locations = { { mapId = DropTracker.Maps.midnight.voidstorm } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -766,6 +930,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 5 / 1114,
                 label = "Gar'chak Skullcleave",
+                lootLock = { type = "quest", id = 94461 },
+                locations = { { mapId = DropTracker.Maps.midnight.slayers_rise } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -773,6 +939,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 3 / 1120,
                 label = "Hardin Steellock",
+                lootLock = { type = "quest", id = 94461 },
+                locations = { { mapId = DropTracker.Maps.midnight.slayers_rise } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -780,6 +948,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 2 / 1627,
                 label = "Lotus Darkblossom",
+                lootLock = { type = "quest", id = 93947 },
+                locations = { { mapId = DropTracker.Maps.midnight.voidstorm } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -787,6 +957,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 3 / 4219,
                 label = "Nightbrood",
+                lootLock = { type = "quest", id = 91051 },
+                locations = { { mapId = DropTracker.Maps.midnight.voidstorm } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -794,6 +966,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 9 / 5335,
                 label = "Nullspiral",
+                lootLock = { type = "quest", id = 94460 },
+                locations = { { mapId = DropTracker.Maps.midnight.voidstorm } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -801,6 +975,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 5 / 3555,
                 label = "Queen o' War",
+                lootLock = { type = "quest", id = 93934 },
+                locations = { { mapId = DropTracker.Maps.midnight.voidstorm } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -808,6 +984,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 5 / 2512,
                 label = "Rakshur the Bonegrinder",
+                lootLock = { type = "quest", id = 93953 },
+                locations = { { mapId = DropTracker.Maps.midnight.slayers_rise } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -815,6 +993,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 3 / 1827,
                 label = "Ravengerus",
+                lootLock = { type = "quest", id = 93895 },
+                locations = { { mapId = DropTracker.Maps.midnight.voidstorm } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -822,6 +1002,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 2 / 1705,
                 label = "Screammaxa the Matriarch",
+                lootLock = { type = "quest", id = 93966 },
+                locations = { { mapId = DropTracker.Maps.midnight.voidstorm } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -829,6 +1011,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 12 / 5044,
                 label = "Sundereth the Caller",
+                lootLock = { type = "quest", id = 90805 },
+                locations = { { mapId = DropTracker.Maps.midnight.voidstorm } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -836,6 +1020,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 3 / 3448,
                 label = "Territorial Voidscythe",
+                lootLock = { type = "quest", id = 91050 },
+                locations = { { mapId = DropTracker.Maps.midnight.voidstorm } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -843,6 +1029,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 4 / 3808,
                 label = "The Many-Broken",
+                lootLock = { type = "quest", id = 94458 },
+                locations = { { mapId = DropTracker.Maps.midnight.voidstorm } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -850,6 +1038,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 4 / 2419,
                 label = "Tremora",
+                lootLock = { type = "quest", id = 91048 },
+                locations = { { mapId = DropTracker.Maps.midnight.voidstorm } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -857,6 +1047,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 10 / 6641,
                 label = "Voidseer Orivane",
+                lootLock = { type = "quest", id = 94459 },
+                locations = { { mapId = DropTracker.Maps.midnight.voidstorm } },
             },
         },
     },
@@ -871,6 +1063,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 4 / 2502,
                 label = "Abysslick",
+                lootLock = { type = "quest", id = 94462 },
+                locations = { { mapId = DropTracker.Maps.midnight.voidstorm } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -878,6 +1072,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 7 / 4078,
                 label = "Aeonelle Blackstar",
+                lootLock = { type = "quest", id = 93944 },
+                locations = { { mapId = DropTracker.Maps.midnight.voidstorm } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -885,6 +1081,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 6 / 3479,
                 label = "Bane of the Vilebloods",
+                lootLock = { type = "quest", id = 93946 },
+                locations = { { mapId = DropTracker.Maps.midnight.voidstorm } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -892,6 +1090,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 2 / 4687,
                 label = "Bilemaw the Gluttonous",
+                lootLock = { type = "quest", id = 93884 },
+                locations = { { mapId = DropTracker.Maps.midnight.voidstorm } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -899,6 +1099,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 8 / 3067,
                 label = "Blackcore",
+                lootLock = { type = "quest", id = 94463 },
+                locations = { { mapId = DropTracker.Maps.midnight.voidstorm } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -906,6 +1108,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 1 / 1867,
                 label = "Eruundi",
+                lootLock = { type = "quest", id = 91047 },
+                locations = { { mapId = DropTracker.Maps.midnight.slayers_rise } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -913,6 +1117,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 5 / 5210,
                 label = "Far'thana the Mad",
+                lootLock = { type = "quest", id = 93896 },
+                locations = { { mapId = DropTracker.Maps.midnight.voidstorm } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -920,6 +1126,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 5 / 1114,
                 label = "Gar'chak Skullcleave",
+                lootLock = { type = "quest", id = 94461 },
+                locations = { { mapId = DropTracker.Maps.midnight.slayers_rise } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -927,6 +1135,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 2 / 1120,
                 label = "Hardin Steellock",
+                lootLock = { type = "quest", id = 94461 },
+                locations = { { mapId = DropTracker.Maps.midnight.slayers_rise } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -934,6 +1144,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 9 / 1627,
                 label = "Lotus Darkblossom",
+                lootLock = { type = "quest", id = 93947 },
+                locations = { { mapId = DropTracker.Maps.midnight.voidstorm } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -941,6 +1153,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 2 / 4219,
                 label = "Nightbrood",
+                lootLock = { type = "quest", id = 91051 },
+                locations = { { mapId = DropTracker.Maps.midnight.voidstorm } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -948,6 +1162,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 5 / 5335,
                 label = "Nullspiral",
+                lootLock = { type = "quest", id = 94460 },
+                locations = { { mapId = DropTracker.Maps.midnight.voidstorm } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -955,6 +1171,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 7 / 3555,
                 label = "Queen o' War",
+                lootLock = { type = "quest", id = 93934 },
+                locations = { { mapId = DropTracker.Maps.midnight.voidstorm } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -962,6 +1180,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 4 / 2512,
                 label = "Rakshur the Bonegrinder",
+                lootLock = { type = "quest", id = 93953 },
+                locations = { { mapId = DropTracker.Maps.midnight.slayers_rise } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -969,6 +1189,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 1 / 1827,
                 label = "Ravengerus",
+                lootLock = { type = "quest", id = 93895 },
+                locations = { { mapId = DropTracker.Maps.midnight.voidstorm } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -976,6 +1198,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 3 / 1705,
                 label = "Screammaxa the Matriarch",
+                lootLock = { type = "quest", id = 93966 },
+                locations = { { mapId = DropTracker.Maps.midnight.voidstorm } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -983,6 +1207,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 9 / 5044,
                 label = "Sundereth the Caller",
+                lootLock = { type = "quest", id = 90805 },
+                locations = { { mapId = DropTracker.Maps.midnight.voidstorm } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -990,6 +1216,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 8 / 3448,
                 label = "Territorial Voidscythe",
+                lootLock = { type = "quest", id = 91050 },
+                locations = { { mapId = DropTracker.Maps.midnight.voidstorm } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -997,6 +1225,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 3 / 3808,
                 label = "The Many-Broken",
+                lootLock = { type = "quest", id = 94458 },
+                locations = { { mapId = DropTracker.Maps.midnight.voidstorm } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -1004,6 +1234,8 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 4 / 2419,
                 label = "Tremora",
+                lootLock = { type = "quest", id = 91048 },
+                locations = { { mapId = DropTracker.Maps.midnight.voidstorm } },
             },
             {
                 kind = DropTracker.SourceKind.npc,
@@ -1011,6 +1243,72 @@ DropTrackerCatalog:RegisterList("Midnight", DropTracker.CollectionType.mount, {
                 variant = DropTracker.Variant.world,
                 chance = 8 / 6641,
                 label = "Voidseer Orivane",
+                lootLock = { type = "quest", id = 94459 },
+                locations = { { mapId = DropTracker.Maps.midnight.voidstorm } },
+            },
+        },
+    },
+    {
+        name = "Ashes of Belo'ren",
+        collectionId = 2607,
+        dropItemId = 246590,
+        sources = {
+            {
+                kind = DropTracker.SourceKind.encounter,
+                id = 3183,
+                variant = DropTracker.Variant.mythic,
+                chance = 2 / 20,
+                label = "Midnight Falls",
+                locations = { { mapId = DropTracker.Maps.midnight.march_on_queldanas } },
+            },
+        },
+    },
+    {
+        name = "Lucent Hawkstrider",
+        collectionId = 2817,
+        dropItemId = 260231,
+        sources = {
+            {
+                kind = DropTracker.SourceKind.item,
+                id = 574407,
+                variant = DropTracker.Variant.mythic,
+                chance = 127 / 6318,
+                label = "Challenger's Cache",
+                statId = 61217,
+                locations = { { mapId = DropTracker.Maps.midnight.magisters_terrace } },
+            },
+        },
+    },
+    {
+        name = "Spectral Hawkstrider",
+        collectionId = 2805,
+        dropItemId = 262914,
+        sources = {
+            {
+                kind = DropTracker.SourceKind.item,
+                id = 574408,
+                variant = DropTracker.Variant.mythic,
+                chance = 196 / 9661,
+                label = "Challenger's Cache",
+                statId = 41295,
+                locations = { { mapId = DropTracker.Maps.midnight.windrunner_spire } },
+            },
+        },
+    },
+    {
+        name = "Duskbrute Harrower",
+        collectionId = 2764,
+        dropItemId = 257176,
+        listGroup = DropTracker.ListGroup.paragon,
+        sources = {
+            {
+                kind = DropTracker.SourceKind.item,
+                id = 267299,
+                variant = DropTracker.Variant.world,
+                chance = 29 / 98,
+                label = "Slayer's Duellum Trove",
+                paragon = true,
+                locations = { { mapId = DropTracker.Maps.midnight.slayers_rise } },
             },
         },
     },

@@ -29,6 +29,22 @@ function Probability.CombinedRemainingPercent(sources)
     return Probability.CombinedMissing(sources) * 100
 end
 
+function Probability.PerSourceObtained(chance, attempts)
+    return 1 - Probability.PerSourceMissing(chance, attempts)
+end
+
+function Probability.CombinedObtained(sources)
+    return 1 - Probability.CombinedMissing(sources)
+end
+
+function Probability.CombinedObtainedPercent(sources)
+    return Probability.CombinedObtained(sources) * 100
+end
+
+function Probability.PerSourceObtainedPercent(chance, attempts)
+    return Probability.PerSourceObtained(chance, attempts) * 100
+end
+
 function Probability.TotalAttempts(sources)
     local total = 0
     for _, row in ipairs(sources or {}) do

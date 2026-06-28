@@ -3,8 +3,9 @@
 local Controller = {}
 DropTracker.UI.Controller = Controller
 
+local mainFrameRef = nil
 local rootFrame = nil
-local expansionList = nil
+local breadcrumbBar = nil
 local itemList = nil
 local detailPanel = nil
 
@@ -21,6 +22,35 @@ local function persistSelection()
     end
 end
 
+local function itemInExpansion(item, expansion)
+    return item and expansion and item.expansion == expansion
+end
+
+local function getExpansionItems()
+    return DropTracker.Catalog.GetItemsForExpansion(selectedExpansion or "")
+end
+
+local function getFilteredItems()
+    local items = getExpansionItems()
+    if DropTracker.UI.Filters and DropTracker.UI.Filters.Apply then
+        return DropTracker.UI.Filters.Apply(items), items
+    end
+    return items, items
+end
+
+local function ensureSelectedItemVisible(filteredItems)
+    if not selectedItem then
+        selectedItem = filteredItems[1]
+        return
+    end
+    for _, item in ipairs(filteredItems) do
+        if item.collectionId == selectedItem.collectionId and item.collectionType == selectedItem.collectionType then
+            return
+        end
+    end
+    selectedItem = filteredItems[1]
+end
+
 local function restoreSelection()
     selectedExpansion = DropTracker.Storage.GetSetting("lastExpansion")
     local expansions = DropTracker.Catalog.GetExpansions()
@@ -33,14 +63,24 @@ local function restoreSelection()
     local lastId = DropTracker.Storage.GetSetting("lastCollectionId")
     if lastType and lastId ~= nil then
         selectedItem = DropTracker.Catalog.GetItem(lastType, lastId)
+        if not itemInExpansion(selectedItem, selectedExpansion) then
+            selectedItem = nil
+        end
+    end
+
+    local filteredItems, allItems = getFilteredItems()
+    if not selectedItem and filteredItems[1] then
+        selectedItem = filteredItems[1]
+    elseif selectedItem then
+        ensureSelectedItemVisible(filteredItems)
     end
 end
 
 local function onExpansionSelected(expansion)
-    selectedExpansion = expansion
-    local items = DropTracker.Catalog.GetItemsForExpansion(expansion)
-    if not selectedItem or selectedItem.expansion ~= expansion then
-        selectedItem = items[1]
+    if selectedExpansion ~= expansion then
+        selectedExpansion = expansion
+        local filteredItems = getFilteredItems()
+        selectedItem = filteredItems[1]
     end
     persistSelection()
     Controller.Refresh()
@@ -52,22 +92,61 @@ local function onItemSelected(item)
     Controller.Refresh()
 end
 
+local function destroyUi()
+    if breadcrumbBar then
+        breadcrumbBar:Hide()
+        breadcrumbBar:SetParent(nil)
+    end
+    if rootFrame then
+        rootFrame:Hide()
+        rootFrame:SetParent(nil)
+    end
+    rootFrame = nil
+    breadcrumbBar = nil
+    itemList = nil
+    detailPanel = nil
+end
+
+local function ensureUi(mainFrame, contentHost)
+    if mainFrame then
+        mainFrameRef = mainFrame
+    end
+    if rootFrame and breadcrumbBar and itemList and detailPanel then
+        return
+    end
+
+    destroyUi()
+
+    if mainFrameRef and DropTracker.UI.Breadcrumbs then
+        breadcrumbBar = DropTracker.UI.Breadcrumbs.Create(mainFrameRef)
+    end
+
+    rootFrame = CreateFrame("Frame", nil, contentHost)
+    rootFrame:SetAllPoints(contentHost)
+
+    itemList = DropTracker.UI.ItemList.Create(rootFrame, onItemSelected)
+    detailPanel = DropTracker.UI.DetailPanel.Create(rootFrame)
+end
+
+function Controller.RefreshBreadcrumbs()
+    if breadcrumbBar then
+        breadcrumbBar:Update(selectedExpansion, onExpansionSelected)
+    end
+end
+
 function Controller.Refresh()
     if not rootFrame then
         return
     end
 
-    local expansions = DropTracker.Catalog.GetExpansions()
-    if expansionList then
-        expansionList:Rebuild(expansions, selectedExpansion)
-    end
+    Controller.RefreshBreadcrumbs()
 
-    local items = DropTracker.Catalog.GetItemsForExpansion(selectedExpansion or "")
+    local filteredItems, allItems = getFilteredItems()
+    ensureSelectedItemVisible(filteredItems)
+
+    local emptyText = (#allItems > 0 and #filteredItems == 0) and "No items match the current filters." or nil
     if itemList then
-        itemList:Rebuild(items, selectedItem, function(parent, item)
-            local label = DropTracker.UI.ItemList.FormatRowLabel(item)
-            return DropTracker.UI.ItemList.BuildSimpleRow(parent, item, label)
-        end)
+        itemList:Rebuild(filteredItems, selectedItem, emptyText)
     end
 
     if detailPanel then
@@ -75,26 +154,31 @@ function Controller.Refresh()
     end
 end
 
-function Controller.OnTabShow(_mainFrame, contentHost)
+function Controller.OnTabShow(mainFrame, contentHost)
     if not contentHost then
         return
     end
 
-    if not rootFrame then
-        rootFrame = CreateFrame("Frame", nil, contentHost)
-        rootFrame:SetAllPoints(contentHost)
-
-        expansionList = DropTracker.UI.ExpansionList.Create(rootFrame, onExpansionSelected)
-        itemList = DropTracker.UI.ItemList.Create(rootFrame, onItemSelected)
-        detailPanel = DropTracker.UI.DetailPanel.Create(rootFrame)
+    ensureUi(mainFrame, contentHost)
+    if breadcrumbBar then
+        if mainFrameRef then
+            breadcrumbBar:SetFrameStrata(mainFrameRef:GetFrameStrata())
+            breadcrumbBar:SetFrameLevel(mainFrameRef:GetFrameLevel() + 20)
+        end
+        breadcrumbBar:Show()
+        if breadcrumbBar._nav then
+            breadcrumbBar._nav:Show()
+        end
     end
-
     rootFrame:Show()
     restoreSelection()
     Controller.Refresh()
 end
 
-function Controller.OnTabHide(_mainFrame, contentHost)
+function Controller.OnTabHide()
+    if breadcrumbBar then
+        breadcrumbBar:Hide()
+    end
     if rootFrame then
         rootFrame:Hide()
     end
